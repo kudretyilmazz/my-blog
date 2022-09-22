@@ -13,11 +13,11 @@ const Index = () => {
 	return (
 		<Layout title="Hakkımda" description="Hakkımda ve iletişim bilgilerim">
 			<div id="about" className="mx-auto py-5 px-3 max-w-[1000px]">
-				<h1 className="text-4xl font-bold text-primary"> {t("ABOUT_TITLE")} </h1>
+				<h1 className=" font-bold "> {t("ABOUT_TITLE")} </h1>
 				<div className="mt-16">
 					<div className="bio">
 						<div className="flex justify-between items-center">
-							<h2 className="text-primary text-xl font-bold"> {t("SHORT_CV")} </h2>
+							<h4 className="  font-bold"> {t("SHORT_CV")} </h4>
 
 							<button className="px-2 py-1 bg-secondary text-white font-medium rounded-sm duration-500 transition hover:scale-105 ">
 								<a href="/images/cv.pdf" download="kudret_yilmaz_cv">
@@ -28,7 +28,7 @@ const Index = () => {
 						<p className="mt-3">{t("CV_DESCRIPTION")}</p>
 					</div>
 					<div className="contact mt-5">
-						<h2 className="text-primary text-xl font-bold"> {t("CONTACT_INFORMATION")} </h2>
+						<h4 className="  font-bold"> {t("CONTACT_INFORMATION")} </h4>
 						<div id="contact-adress" className="mt-3">
 							<div className="flex items-center gap-x-2">
 								<svg

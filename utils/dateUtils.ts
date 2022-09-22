@@ -1,11 +1,6 @@
-// Import Next
-import { useRouter } from "next/router";
-
-export const useReadableDateFormatter = (date: any) => {
-	// Variables
-	const router = useRouter();
-
-	return new Date(date).toLocaleDateString(router.locale === "tr" ? "tr-TR" : "en-EN", {
+export const dateReableFormatter = (date: any, locale: any) => {
+	const dateLocale = locale ? (locale === "tr" ? "tr-TR" : "en-EN") : "en-EN";
+	return new Date(date).toLocaleDateString(dateLocale, {
 		year: "numeric",
 		month: "short",
 		day: "numeric",

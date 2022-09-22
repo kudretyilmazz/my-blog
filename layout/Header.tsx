@@ -36,7 +36,7 @@ const Header: NextComponentType = () => {
 		setLanguage(activeLang === "en" ? "tr" : "en");
 	};
 	return (
-		<header className="flex items-center justify-between h-20 max-w-[1200px] mx-auto w-full">
+		<header className="flex items-center justify-between h-20 max-w-[1200px] mx-auto w-full px-3">
 			<div className="flex items-center ">
 				<div className="mr-4" onClick={themeSwitcher}>
 					{router.locale === "tr" ? <TurkishFlag /> : <EnglishFlag />}

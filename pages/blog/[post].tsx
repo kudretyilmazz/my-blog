@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import Layout from "layout/Layout";
 
 // Import Util
-import { useReadableDateFormatter } from "utils/dateUtils";
+import { dateReableFormatter } from "utils/dateUtils";
 
 // Import Query
 import { getSinglePost } from "client/getSinglePost";
@@ -26,7 +26,6 @@ const Post = (props: PostProps) => {
 	const router = useRouter();
 
 	const currentPost = content[0];
-	console.log(router);
 
 	// Variables
 
@@ -36,7 +35,7 @@ const Post = (props: PostProps) => {
 				<h1 className="text-4xl"> {currentPost?.title} </h1>
 				<div id="info" className="my-10">
 					<span className="bg-primary text-white text-sm px-2 py-1 rounded-full">
-						{useReadableDateFormatter(currentPost?.createdAt)}
+						{dateReableFormatter(currentPost?.createdAt, router.locale)}
 					</span>
 					<span className="mx-3">|</span>
 					<span> {currentPost?.category?.map((item: string) => item)} </span>
