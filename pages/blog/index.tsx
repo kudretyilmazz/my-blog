@@ -24,8 +24,6 @@ const Index = (props: BlogProps) => {
 	// Variables
 	const router = useRouter();
 
-	console.log(posts);
-
 	return (
 		<Layout title="Blog" description="Front-end ile ilgili blog yazılırım">
 			<section id="blog" className="mx-auto px-3 max-w-[1000px] w-full">
@@ -61,7 +59,7 @@ const Index = (props: BlogProps) => {
 
 export default Index;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 	const posts = await getAllPosts();
 	return {
 		props: {
