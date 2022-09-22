@@ -35,6 +35,7 @@ const Header: NextComponentType = () => {
 		setActiveLang(activeLang === "en" ? "tr" : "en");
 		setLanguage(activeLang === "en" ? "tr" : "en");
 	};
+
 	return (
 		<header className="flex items-center justify-between h-20 max-w-[1200px] mx-auto w-full px-3">
 			<div className="flex items-center ">

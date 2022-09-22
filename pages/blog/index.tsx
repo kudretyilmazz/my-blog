@@ -30,7 +30,7 @@ const Index = (props: BlogProps) => {
 				<h1 className="t font-bold ">Blog</h1>
 				<div id="posts" className="mt-8 w-full">
 					{posts &&
-						posts.map((item: any) => {
+						posts.reverse().map((item: any) => {
 							return (
 								<div
 									onClick={() => router.push(`blog/${item?.id}`)}

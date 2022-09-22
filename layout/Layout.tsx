@@ -23,7 +23,6 @@ const Layout = (props: LayoutProps) => {
 	const { children, title, description } = props;
 
 	const router = useRouter();
-	console.log(router);
 
 	return (
 		<>
@@ -40,7 +39,9 @@ const Layout = (props: LayoutProps) => {
 			<div className={router.pathname !== "/blog/[post]" ? "h-[100vh]" : ""}>
 				<div className="flex flex-col items-center justify-center h-full">
 					<Header />
-					<main className="w-full  flex-1 flex items-center justify-center pb-10">{children}</main>
+					<main className="w-full flex-1 flex items-center justify-center pb-10 pt-3">
+						{children}
+					</main>
 					<Footer />
 				</div>
 			</div>
