@@ -1,5 +1,9 @@
 // Import React
-import React from "react";
+import React, { useState, useLayoutEffect } from "react";
+
+// Import Store
+import { useAppSelector } from "store/hook";
+import { allPosts } from "store/reducers/currentPostReducer";
 
 // Import Next
 import { useRouter } from "next/router";
@@ -10,24 +14,29 @@ import Layout from "layout/Layout";
 // Import Util
 import { dateReableFormatter } from "utils/dateUtils";
 
-// Import Query
-import { getSinglePost } from "client/getSinglePost";
-
 // RichText Renderer
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
-interface PostProps {
-	content: any;
-}
-
-const Post = (props: PostProps) => {
-	// Props Destruction
-	const { content } = props;
-	const router = useRouter();
-
-	const currentPost = content[0];
+const Post = () => {
+	// useStates
+	const [currentPost, setCurrentPost] = useState<any>(null);
 
 	// Variables
+	const router = useRouter();
+	const allPostData = useAppSelector(allPosts);
+
+	// Functions
+	const findMyPost = async () => {
+		const filteredPost: any =
+			allPostData && (await allPostData?.filter((item: any) => item?.slug === router.query.post));
+
+		filteredPost && setCurrentPost(filteredPost[0]);
+	};
+
+	// useLayoutEffect
+	useLayoutEffect(() => {
+		findMyPost();
+	});
 
 	return (
 		<Layout title="Post">
@@ -65,13 +74,3 @@ const Post = (props: PostProps) => {
 };
 
 export default Post;
-
-export const getServerSideProps = async (context: any) => {
-	const { post } = context.params;
-	const content = await getSinglePost(post);
-	return {
-		props: {
-			content,
-		},
-	};
-};

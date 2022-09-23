@@ -1,3 +1,13 @@
+// Import React
+import { useLayoutEffect } from "react";
+
+// Import Client
+import { getAllPosts } from "client/getAllPosts";
+
+// Import Store
+import { Provider } from "react-redux";
+import { store } from "store/store";
+
 // Import Next Theme
 import { ThemeProvider } from "next-themes";
 
@@ -8,10 +18,16 @@ import type { AppProps } from "next/app";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
+	// useEffect
+	useLayoutEffect(() => {
+		getAllPosts();
+	}, []);
 	return (
-		<ThemeProvider attribute="class">
-			<Component {...pageProps} />
-		</ThemeProvider>
+		<Provider store={store}>
+			<ThemeProvider attribute="class">
+				<Component {...pageProps} />
+			</ThemeProvider>
+		</Provider>
 	);
 }
 

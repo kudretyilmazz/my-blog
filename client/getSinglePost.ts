@@ -1,5 +1,6 @@
 import { gql } from "graphql-request";
 import { graphcms } from "./client";
+import { store } from "store/store";
 
 export const getSinglePost = async (id: any) => {
 	const getSinglePostQuery = gql`

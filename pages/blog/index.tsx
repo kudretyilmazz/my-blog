@@ -1,5 +1,9 @@
 // Import React
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+// Import Store
+import { useAppSelector } from "store/hook";
+import { allPosts } from "store/reducers/currentPostReducer";
 
 // Import Next
 import { useRouter } from "next/router";
@@ -10,21 +14,17 @@ import Layout from "layout/Layout";
 // Import Util
 import { dateReableFormatter } from "utils/dateUtils";
 
-// Import Request
-import { getAllPosts } from "client/getAllPosts";
-
 // Import Components
 import Pagination from "components/Pagination";
 
 interface BlogProps {
-	posts: any;
+	posts?: any;
 }
 
 const Index = (props: BlogProps) => {
-	// Props Destruction
-	const { posts } = props;
-
 	// useStates
+	const [posts, setPosts] = useState<any>(null);
+	const postdata = useAppSelector(allPosts);
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const [postsPerPage] = useState<number>(5);
 
@@ -34,7 +34,16 @@ const Index = (props: BlogProps) => {
 	// Pagination calculator
 	const indexOfLastPost = currentPage * postsPerPage;
 	const indexOfFirstPost = indexOfLastPost - postsPerPage;
-	const currenPost = posts?.reverse()?.slice(indexOfFirstPost, indexOfLastPost);
+	const currenPost = Array.isArray(posts) && posts.slice(indexOfFirstPost, indexOfLastPost);
+
+	// Functions
+	const goPost = (slug: string) => {
+		router.push(`blog/${slug}`);
+	};
+
+	useEffect(() => {
+		setPosts(postdata);
+	}, [postdata]);
 
 	return (
 		<Layout title="Blog" description="Front-end ile ilgili blog yazılırım">
@@ -45,7 +54,7 @@ const Index = (props: BlogProps) => {
 						currenPost?.map((item: any) => {
 							return (
 								<div
-									onClick={() => router.push(`blog/${item?.id}`)}
+									onClick={() => goPost(item?.slug)}
 									key={item?.id}
 									id="work-card"
 									className="rounded-md my-4 bg-thirty dark:bg-primary px-5 hover:scale-105 duration-500  cursor-pointer transition"
@@ -66,7 +75,7 @@ const Index = (props: BlogProps) => {
 				</div>
 				<div className="mx-auto w-full">
 					<Pagination
-						totalPosts={posts.length}
+						totalPosts={posts?.length}
 						postsPerPage={postsPerPage}
 						setCurrentPage={setCurrentPage}
 						currentPage={currentPage}
@@ -79,11 +88,11 @@ const Index = (props: BlogProps) => {
 
 export default Index;
 
-export const getServerSideProps = async () => {
-	const posts = await getAllPosts();
-	return {
-		props: {
-			posts,
-		},
-	};
-};
+// export const getServerSideProps = async () => {
+// 	const posts = await getAllPosts();
+// 	return {
+// 		props: {
+// 			posts,
+// 		},
+// 	};
+// };
