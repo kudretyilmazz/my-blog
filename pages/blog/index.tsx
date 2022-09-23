@@ -1,12 +1,11 @@
 // Import React
-import React, { useState, useEffect } from "react";
-
-// Import Store
-import { useAppSelector } from "store/hook";
-import { allPosts } from "store/reducers/currentPostReducer";
+import React, { useState } from "react";
 
 // Import Next
 import { useRouter } from "next/router";
+
+// Import Client
+import { getAllPosts } from "client/getAllPosts";
 
 // Import Layout
 import Layout from "layout/Layout";
@@ -22,9 +21,9 @@ interface BlogProps {
 }
 
 const Index = (props: BlogProps) => {
+	// Props Destruction
+	const { posts } = props;
 	// useStates
-	const [posts, setPosts] = useState<any>(null);
-	const postdata = useAppSelector(allPosts);
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const [postsPerPage] = useState<number>(5);
 
@@ -40,10 +39,6 @@ const Index = (props: BlogProps) => {
 	const goPost = (slug: string) => {
 		router.push(`blog/${slug}`);
 	};
-
-	useEffect(() => {
-		setPosts(postdata);
-	}, [postdata]);
 
 	return (
 		<Layout title="Blog" description="Front-end ile ilgili blog yazılırım">
@@ -88,11 +83,11 @@ const Index = (props: BlogProps) => {
 
 export default Index;
 
-// export const getServerSideProps = async () => {
-// 	const posts = await getAllPosts();
-// 	return {
-// 		props: {
-// 			posts,
-// 		},
-// 	};
-// };
+export const getServerSideProps = async () => {
+	const posts = await getAllPosts();
+	return {
+		props: {
+			posts,
+		},
+	};
+};

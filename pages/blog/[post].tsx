@@ -1,9 +1,8 @@
 // Import React
-import React, { useState, useLayoutEffect } from "react";
+import React from "react";
 
-// Import Store
-import { useAppSelector } from "store/hook";
-import { allPosts } from "store/reducers/currentPostReducer";
+// Import Client
+import { getSinglePost } from "client/getSinglePost";
 
 // Import Next
 import { useRouter } from "next/router";
@@ -14,29 +13,11 @@ import Layout from "layout/Layout";
 // Import Util
 import { dateReableFormatter } from "utils/dateUtils";
 
-// RichText Renderer
-import { RichText } from "@graphcms/rich-text-react-renderer";
-
-const Post = () => {
-	// useStates
-	const [currentPost, setCurrentPost] = useState<any>(null);
-
+const Post = (props: any) => {
 	// Variables
 	const router = useRouter();
-	const allPostData = useAppSelector(allPosts);
-
-	// Functions
-	const findMyPost = async () => {
-		const filteredPost: any =
-			allPostData && (await allPostData?.filter((item: any) => item?.slug === router.query.post));
-
-		filteredPost && setCurrentPost(filteredPost[0]);
-	};
-
-	// useLayoutEffect
-	useLayoutEffect(() => {
-		findMyPost();
-	});
+	console.log(props.content[0], "asdsad");
+	const currentPost = props.content[0];
 
 	return (
 		<Layout title="Post">
@@ -49,28 +30,24 @@ const Post = () => {
 					<span className="mx-3">|</span>
 					<span> {currentPost?.category?.map((item: string) => item)} </span>
 				</div>
-				<div id="content" className="content w-full">
-					{currentPost && (
-						<RichText
-							content={currentPost?.content?.raw?.children}
-							renderers={{
-								a: ({ children, href, openInNewTab }) => (
-									<a
-										className="text-secondary"
-										href={href}
-										target={openInNewTab ? "_blank" : ""}
-										rel="noreferrer"
-									>
-										{children}
-									</a>
-								),
-							}}
-						/>
-					)}
-				</div>
+				<div
+					id="content"
+					dangerouslySetInnerHTML={{ __html: currentPost.content.html }}
+					className="content w-full"
+				></div>
 			</section>
 		</Layout>
 	);
 };
 
 export default Post;
+
+export const getServerSideProps = async (context: any) => {
+	const { post } = context.params;
+	const content = await getSinglePost(post);
+	return {
+		props: {
+			content,
+		},
+	};
+};

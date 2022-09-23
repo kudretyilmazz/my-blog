@@ -1,11 +1,10 @@
 import { gql } from "graphql-request";
 import { graphcms } from "./client";
-import { store } from "store/store";
 
-export const getSinglePost = async (id: any) => {
+export const getSinglePost = async (slug: any) => {
 	const getSinglePostQuery = gql`
 		{
-			blogposts(where: {id: "${id}"}) {
+			blogposts(where: {slug: "${slug}"}) {
                 id
 				title
 				category
@@ -13,6 +12,7 @@ export const getSinglePost = async (id: any) => {
 				slug
 				content {
 					raw
+					html
 				}
 				tags
 				description

@@ -1,11 +1,18 @@
 // Import Redux
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 // Import Reducers
-import currentPostReducer from "./reducers/currentPostReducer";
+
+const reducerSlice = createSlice({
+	name: "store",
+	initialState: {},
+	reducers: {
+		someAction: function () {},
+	},
+});
 
 export const store = configureStore({
-	reducer: { currentPostReducer },
+	reducer: { someReducer: reducerSlice.reducer },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
