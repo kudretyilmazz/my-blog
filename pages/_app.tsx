@@ -17,7 +17,7 @@ import type { AppProps } from "next/app";
 // Global Style
 import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
 	// useEffect
 	useLayoutEffect(() => {
 		getAllPosts();

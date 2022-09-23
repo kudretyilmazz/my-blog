@@ -12,6 +12,9 @@ import project from "../project.json";
 import Footer from "./Footer";
 import Header from "./Header";
 
+// Import Framer Motion
+import { motion } from "framer-motion";
+
 interface LayoutProps {
 	children?: JSX.Element;
 	title?: string;
@@ -40,7 +43,20 @@ const Layout = (props: LayoutProps) => {
 				<div className="flex flex-col items-center justify-center h-full">
 					<Header />
 					<main className="w-full flex-1 flex items-center justify-center pb-10 pt-3">
-						{children}
+						<motion.div
+							className="w-full"
+							variants={{
+								initial: { opacity: 0 },
+								animate: { opacity: 1 },
+								exit: { opacity: 0 },
+							}}
+							initial="initial"
+							animate="animate"
+							exit="exit"
+							transition={{ duration: 0.5 }}
+						>
+							{children}
+						</motion.div>
 					</main>
 					<Footer />
 				</div>
