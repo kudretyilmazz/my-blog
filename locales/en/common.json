@@ -2,5 +2,7 @@
 	"HOME": "Home",
 	"BLOG": "Blog",
 	"ABOUT": "About",
-	"FOOTER_COPYRIGHT": "2022 © All rights reserved."
+	"FOOTER_COPYRIGHT": "2022 © All rights reserved.",
+	"PREVIOUS": "Previous",
+	"NEXT": "Next"
 }

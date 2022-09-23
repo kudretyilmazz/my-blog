@@ -15,9 +15,7 @@ export const getSinglePost = async (id: any) => {
 				}
 				tags
 				description
-				image {
-					url
-				}
+				
               }
 		}
 	`;

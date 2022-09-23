@@ -15,9 +15,6 @@ export const getAllPosts = async () => {
 				}
 				tags
 				description
-				image {
-					url
-				}
 			}
 		}
 	`;
