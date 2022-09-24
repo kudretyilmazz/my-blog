@@ -38,7 +38,7 @@ const Header: NextComponentType = () => {
 	};
 
 	return (
-		<header className="flex items-center flex-shrink-0 justify-between h-20 max-w-[1200px] mx-auto w-full px-3">
+		<header className="flex items-center justify-between h-20 max-w-[1200px] mx-auto w-full px-3">
 			<div className="flex items-center ">
 				<div className="mr-4 transition" onClick={themeSwitcher}>
 					{router.locale === "tr" ? <TurkishFlag /> : <EnglishFlag />}
