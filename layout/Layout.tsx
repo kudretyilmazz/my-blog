@@ -42,7 +42,7 @@ const Layout = (props: LayoutProps) => {
 			<div className={router.pathname !== "/blog/[post]" ? "h-[100vh]" : ""}>
 				<div className="flex flex-col items-center justify-center h-full">
 					<Header />
-					<main className="w-full h-[calc(100%_-_124px) my-auto  flex items-center justify-center pb-10 pt-3">
+					<main className="w-full flex-1 flex-shrink-0 my-auto  flex items-center justify-center pb-10 pt-3">
 						<motion.div
 							className="w-full"
 							variants={{
