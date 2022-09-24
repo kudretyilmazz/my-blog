@@ -46,7 +46,7 @@ const Header: NextComponentType = () => {
 
 				<div>
 					<DarkModeSwitch
-						sunColor="#F2AB0C"
+						size={20}
 						checked={theme === "dark"}
 						onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
 					/>
@@ -56,7 +56,10 @@ const Header: NextComponentType = () => {
 				<ul className="flex gap-x-6 md:gap-x-10">
 					{menu?.map((item: any, index) => {
 						return (
-							<li key={index} className="font-bold select-none cursor-pointer hover:text-primary">
+							<li
+								key={index}
+								className="font-bold select-none transition cursor-pointer hover:text-lighttext"
+							>
 								<Link href={item?.url}>
 									<a
 										className={
