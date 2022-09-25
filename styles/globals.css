@@ -9,19 +9,28 @@ body {
 .content > img {
 	@apply mx-auto;
 }
+.content > pre {
+	@apply w-full overflow-auto flex;
+}
+.content > pre > code {
+	@apply mx-auto block bg-gray-400 p-6 rounded-md my-2 text-gray-100 selection:text-slate-800;
+}
+.content > a {
+	@apply underline-offset-0;
+}
 
 @layer base {
 	h1 {
-		@apply text-4xl text-primary dark:text-white;
+		@apply text-4xl text-primary dark:text-white my-5;
 	}
 	h2 {
-		@apply text-3xl text-primary dark:text-white;
+		@apply text-3xl text-primary dark:text-white my-5;
 	}
 	h3 {
-		@apply text-2xl text-primary dark:text-white;
+		@apply text-sm md:text-2xl text-primary dark:text-white my-5;
 	}
 	h4 {
-		@apply text-xl text-primary dark:text-white;
+		@apply text-xl text-primary dark:text-white my-5;
 	}
 	p {
 		@apply my-5 text-primary dark:text-white;

@@ -23,5 +23,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [lineClamp],
+	plugins: [lineClamp, require("@tailwindcss/typography")],
 };
