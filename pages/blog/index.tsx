@@ -33,7 +33,8 @@ const Index = (props: BlogProps) => {
 	// Pagination calculator
 	const indexOfLastPost = currentPage * postsPerPage;
 	const indexOfFirstPost = indexOfLastPost - postsPerPage;
-	const currenPost = Array.isArray(posts) && posts.slice(indexOfFirstPost, indexOfLastPost);
+	const currentPosts =
+		Array.isArray(posts) && posts?.reverse()?.slice(indexOfFirstPost, indexOfLastPost);
 
 	// Functions
 	const goPost = (slug: string) => {
@@ -41,12 +42,12 @@ const Index = (props: BlogProps) => {
 	};
 
 	return (
-		<Layout title="Blog" description="Front-end ile ilgili blog yazılırım">
+		<Layout title="Blog" description="Front-end geliştirme ile ilgili blog yazılırım">
 			<section id="blog" className="mx-auto px-3 max-w-[1000px] w-full">
 				<h1 className="t font-bold ">Blog</h1>
 				<div id="posts" className="mt-8 w-full">
-					{currenPost &&
-						currenPost?.map((item: any) => {
+					{currentPosts &&
+						currentPosts?.map((item: any) => {
 							return (
 								<div
 									onClick={() => goPost(item?.slug)}

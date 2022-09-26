@@ -19,13 +19,12 @@ interface LayoutProps {
 	children?: JSX.Element;
 	title?: string;
 	description?: string;
+	keywords?: string;
 }
 
 const Layout = (props: LayoutProps) => {
 	// Props Destruction
-	const { children, title, description } = props;
-
-	const router = useRouter();
+	const { children, title, description, keywords } = props;
 
 	return (
 		<>
@@ -36,7 +35,7 @@ const Layout = (props: LayoutProps) => {
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta property="og:title" content={title} key="title" />
 				<meta name="description" content={description} />
-				<meta name="keywords" content={project.keywords} />
+				<meta name="keywords" content={keywords ? keywords : project.keywords} />
 				<meta name="author" content={project.author} />
 			</Head>
 			<div>

@@ -46,6 +46,8 @@ const Header: NextComponentType = () => {
 
 				<div>
 					<DarkModeSwitch
+						sunColor="#202020"
+						moonColor="#f2f2f2"
 						size={20}
 						checked={theme === "dark"}
 						onChange={() => setTheme(theme === "dark" ? "light" : "dark")}

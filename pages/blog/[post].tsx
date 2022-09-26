@@ -32,11 +32,14 @@ import {
 const Post = (props: any) => {
 	// Variables
 	const router = useRouter();
-	console.log(props.content[0], "asdsad");
 	const currentPost = props.content[0];
 
 	return (
-		<Layout title="Post">
+		<Layout
+			title={currentPost?.title}
+			description={currentPost?.description}
+			keywords={currentPost?.tags}
+		>
 			<section id="blog" className="mx-auto py-5 px-3 max-w-[1000px] w-full ">
 				<h1 className="text-center md:text-left"> {currentPost?.title} </h1>
 				<div className="my-10 flex items-center justify-between flex-col md:flex-row ">
