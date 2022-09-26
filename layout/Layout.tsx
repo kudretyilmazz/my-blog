@@ -39,7 +39,7 @@ const Layout = (props: LayoutProps) => {
 				<meta name="keywords" content={project.keywords} />
 				<meta name="author" content={project.author} />
 			</Head>
-			<div className={router.pathname !== "/blog/[post]" ? "h-[100vh]" : ""}>
+			<div>
 				<div className="flex flex-col items-center justify-center h-full">
 					<Header />
 					<main className="w-full flex-1  flex items-center justify-center pb-10 pt-3">
