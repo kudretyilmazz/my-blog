@@ -21,8 +21,10 @@ const Home = () => {
 					{/* HERO SECTION */}
 					<section id="hero" className="grid grid-cols-5 max-w-[1000px] mx-auto px-3 ">
 						<div id="left" className="col-span-5 md:col-span-3  mb-5 mx-auto order-2 md:order-1">
-							<h2 className="font-bold text-center md:text-left ">{t("HERO_TITLE")}</h2>
-							<h2 className="md:text-3xl md:text-left   text-center text-2xl ">{t("HERO_JOB")}</h2>
+							<h2 className=" text-center md:text-left ">{t("HERO_TITLE")}</h2>
+							<h2 className="md:text-3xl md:text-left font-normal  text-center text-2xl ">
+								{t("HERO_JOB")}
+							</h2>
 							<p className="text-lg my-10  text-center md:text-left ">{t("HERO_DESCRIPTION")}</p>
 							<div className="flex justify-center md:justify-start">
 								<button className="px-6 py-3 bg-secondary text-white font-medium rounded-sm duration-500 transition hover:scale-105 ">

@@ -23,6 +23,7 @@ interface BlogProps {
 const Index = (props: BlogProps) => {
 	// Props Destruction
 	const { posts } = props;
+	posts.reverse();
 	// useStates
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const [postsPerPage] = useState<number>(5);
@@ -33,8 +34,7 @@ const Index = (props: BlogProps) => {
 	// Pagination calculator
 	const indexOfLastPost = currentPage * postsPerPage;
 	const indexOfFirstPost = indexOfLastPost - postsPerPage;
-	const currentPosts =
-		Array.isArray(posts) && posts?.reverse()?.slice(indexOfFirstPost, indexOfLastPost);
+	const currentPosts = Array.isArray(posts) && posts?.slice(indexOfFirstPost, indexOfLastPost);
 
 	// Functions
 	const goPost = (slug: string) => {
@@ -44,7 +44,7 @@ const Index = (props: BlogProps) => {
 	return (
 		<Layout title="Blog" description="Front-end geliştirme ile ilgili blog yazılırım">
 			<section id="blog" className="mx-auto px-3 max-w-[1000px] w-full">
-				<h1 className="t font-bold ">Blog</h1>
+				<h1>Blog</h1>
 				<div id="posts" className="mt-8 w-full">
 					{currentPosts &&
 						currentPosts?.map((item: any) => {
@@ -56,7 +56,7 @@ const Index = (props: BlogProps) => {
 									className="rounded-md my-4 bg-thirty dark:bg-primary px-5 hover:scale-105 duration-500  cursor-pointer transition"
 								>
 									<div id="content" className="ml-5 flex items-center justify-between">
-										<h3 className="font-bold ">{item?.title}</h3>
+										<h3>{item?.title}</h3>
 										<div className="flex gap-x-4 my-4 ">
 											<span className="hidden md:inline">
 												{" "}

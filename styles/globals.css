@@ -21,16 +21,16 @@ body {
 
 @layer base {
 	h1 {
-		@apply text-4xl text-primary dark:text-white my-5;
+		@apply text-4xl text-primary dark:text-white my-5 font-bold;
 	}
 	h2 {
-		@apply text-3xl text-primary dark:text-white my-5;
+		@apply text-3xl text-primary dark:text-white my-5 font-bold;
 	}
 	h3 {
-		@apply text-sm md:text-2xl text-primary dark:text-white my-5;
+		@apply text-sm md:text-2xl text-primary dark:text-white my-5 font-bold;
 	}
 	h4 {
-		@apply text-xl text-primary dark:text-white my-5;
+		@apply text-xl text-primary dark:text-white my-5 font-bold;
 	}
 	p {
 		@apply my-5 text-primary dark:text-white;
