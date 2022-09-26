@@ -40,11 +40,11 @@ const Layout = (props: LayoutProps) => {
 				<meta name="author" content={project.author} />
 			</Head>
 			<div>
-				<div className="flex flex-col items-center justify-center h-full">
+				<div className="flex flex-col items-center justify-center h-full min-h-screen">
 					<Header />
 					<main className="w-full flex-1  flex items-center justify-center pb-10 pt-3">
 						<motion.div
-							className="w-full"
+							className="w-full h-full"
 							variants={{
 								initial: { opacity: 0 },
 								animate: { opacity: 1 },

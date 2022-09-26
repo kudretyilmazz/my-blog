@@ -57,9 +57,12 @@ const Index = (props: BlogProps) => {
 									<div id="content" className="ml-5 flex items-center justify-between">
 										<h3 className="font-bold ">{item?.title}</h3>
 										<div className="flex gap-x-4 my-4 ">
-											<span> {dateReableFormatter(item?.createdAt, router.locale)}</span>
-											<span>|</span>
-											<span className="text-lighttext">
+											<span className="hidden md:inline">
+												{" "}
+												{dateReableFormatter(item?.createdAt, router.locale)}
+											</span>
+											<span className="hidden md:inline">|</span>
+											<span className="text-lighttext hidden md:inline">
 												{item?.category?.map((item: string) => item)}
 											</span>
 										</div>
