@@ -27,7 +27,7 @@ const Home = () => {
 							</h2>
 							<p className="text-lg my-10  text-center md:text-left ">{t("HERO_DESCRIPTION")}</p>
 							<div className="flex justify-center md:justify-start">
-								<button className="px-6 py-3 bg-secondary text-white font-medium rounded-sm duration-500 transition hover:scale-105 ">
+								<button className="px-6 py-3 bg-secondary text-white font-regular rounded-full duration-500 transition hover:scale-105 ">
 									<a href="/images/cv.pdf" download="kudret_yilmaz_cv">
 										{t("DOWNLOAD_CV")}
 									</a>

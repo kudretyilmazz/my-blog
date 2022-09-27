@@ -12,7 +12,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				heebo: "heebo, sans-serif",
+				heebo: "'Montserrat', sans-serif",
 			},
 			colors: {
 				primary: "#21243D",

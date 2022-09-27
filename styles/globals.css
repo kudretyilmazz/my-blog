@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://use.typekit.net/sxd0icn.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 body {
 	@apply w-full h-full box-border m-0 p-0 font-heebo dark:bg-[#121212];
@@ -34,5 +34,12 @@ body {
 	}
 	p {
 		@apply my-5 text-primary dark:text-white dark:text-opacity-60;
+	}
+	span {
+		@apply text-primary dark:text-white dark:text-opacity-60;
+	}
+	strong,
+	b {
+		@apply dark:text-white my-5 font-bold dark:text-opacity-[0.87];
 	}
 }
