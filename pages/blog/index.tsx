@@ -24,6 +24,7 @@ const Index = (props: BlogProps) => {
 	// Props Destruction
 	const { posts } = props;
 	posts.reverse();
+
 	// useStates
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const [postsPerPage] = useState<number>(5);
@@ -59,7 +60,6 @@ const Index = (props: BlogProps) => {
 										<h3>{item?.title}</h3>
 										<div className="flex gap-x-4 my-4 ">
 											<span className="hidden md:inline">
-												{" "}
 												{dateReableFormatter(item?.createdAt, router.locale)}
 											</span>
 											<span className="hidden md:inline">|</span>

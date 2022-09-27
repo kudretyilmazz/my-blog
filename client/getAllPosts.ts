@@ -7,9 +7,6 @@ export const getAllPosts = async () => {
 			blogposts {
 				id
 				title
-				content {
-					raw
-				}
 				category
 				createdAt
 				slug

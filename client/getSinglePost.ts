@@ -11,7 +11,6 @@ export const getSinglePost = async (slug: any) => {
 				createdAt
 				slug
 				content {
-					raw
 					html
 				}
 				tags
