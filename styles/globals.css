@@ -13,7 +13,7 @@ body {
 	@apply w-full overflow-auto flex;
 }
 .content > pre > code {
-	@apply mx-auto block bg-gray-400 p-6 rounded-md my-2 text-gray-100 selection:text-slate-800;
+	@apply mx-auto block bg-gray-200 dark:bg-gray-800 dark:text-white p-6 rounded-md my-2 text-gray-800;
 }
 .content > a {
 	@apply underline-offset-0;
