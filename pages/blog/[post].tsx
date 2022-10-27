@@ -29,7 +29,11 @@ import {
 	LinkedinIcon,
 } from "next-share";
 
-const Post = (props: any) => {
+interface PostProps {
+	content: Record<string, any>[];
+}
+
+const Post = (props: PostProps) => {
 	// Variables
 	const router = useRouter();
 	const currentPost = props.content[0];

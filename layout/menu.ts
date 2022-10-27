@@ -1,4 +1,4 @@
-export const menu = [
+export const menu: Array<{ title: string; url: string }> = [
 	{
 		title: "HOME",
 		url: "/",
