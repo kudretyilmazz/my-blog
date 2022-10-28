@@ -43,7 +43,7 @@ const Header: NextComponentType = () => {
 	};
 
 	return (
-		<header className="flex items-center justify-between h-20 max-w-[1200px] mx-auto w-full px-3">
+		<header className="flex items-center justify-between h-20 max-w-[1200px] mx-auto w-full px-3 z-10 ">
 			<div className="flex items-center ">
 				<div className="mr-4 ml-3 " onClick={langSwitcher}>
 					{router.locale === "tr" ? <TurkishFlag /> : <EnglishFlag />}
@@ -59,12 +59,12 @@ const Header: NextComponentType = () => {
 					/>
 				</div>
 			</div>
-			<div className="md:hidden transition-all">
+			<div className="md:hidden">
 				<div>
 					<Hamburger size={20} toggled={isMobileOpen} toggle={setIsMobileOpen} />
 				</div>
 
-				<nav className={`${isMobileOpen ? "flex" : "hidden"} `}>
+				<nav className={`${isMobileOpen ? "opacity-100" : "opacity-0"} flex transition-all`}>
 					<ul
 						className={`flex dark:bg-primary bg-white w-full  absolute left-0 h-40 z-10 flex-col justify-evenly items-center  `}
 					>
@@ -72,7 +72,7 @@ const Header: NextComponentType = () => {
 							return (
 								<li
 									key={index}
-									className="font-bold select-none cursor-pointer flex justify-center items-center w-full h-full border-b-2 border-lighttext last:border-0"
+									className="font-bold select-none cursor-pointer flex justify-center items-center w-full h-full border-b-2 border-lighttext  first:border-t-2 "
 								>
 									<Link href={item?.url} className="w-full h-full">
 										<span
@@ -103,9 +103,9 @@ const Header: NextComponentType = () => {
 										className={
 											router.asPath.includes(item?.url)
 												? router.asPath !== "/" && item?.title === "HOME"
-													? " hover:text-lighttext dark:hover:text-white transition-all"
+													? " hover:text-lighttext dark:hover:text-white "
 													: "text-secondary  dark:text-secondary"
-												: "hover:text-lighttext dark:hover:text-white transition-all"
+												: "hover:text-lighttext dark:hover:text-white "
 										}
 									>
 										{t(item?.title)}

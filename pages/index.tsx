@@ -16,7 +16,7 @@ const Home = () => {
 
 	return (
 		<>
-			<Layout title="Anasayfa" description="Kişisel bloğum ve portfolyom, özgeçmişim">
+			<Layout title={t("HOMEPAGE")} description="Kişisel bloğum ve portfolyom, özgeçmişim">
 				<>
 					{/* HERO SECTION */}
 					<section id="hero" className="grid grid-cols-5 max-w-[1000px] mx-auto px-3 ">

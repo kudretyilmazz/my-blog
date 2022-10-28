@@ -2,7 +2,6 @@
 import React from "react";
 
 // Import Next
-import { useRouter } from "next/router";
 import Head from "next/head";
 
 // Import Project Data
