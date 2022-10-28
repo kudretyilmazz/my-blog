@@ -19,7 +19,7 @@ const Index = () => {
 						<div className="flex justify-between items-center">
 							<h4> {t("SHORT_CV")} </h4>
 
-							<button className="px-2 py-1 bg-secondary text-white font-normal rounded-md duration-500 transition hover:scale-105 ">
+							<button className="px-6 py-3 bg-secondary text-white font-regular rounded-full duration-500 transition hover:scale-105 ">
 								<a href="/images/cv.pdf" download="kudret_yilmaz_cv">
 									{t("DOWNLOAD_CV")}
 								</a>

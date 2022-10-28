@@ -50,13 +50,15 @@ function Pagination(props: PaginationProps) {
 								<li
 									key={number}
 									className={`mr-2 border-2  border-primary px-3  rounded-md cursor-pointer transition ${
-										number == currentPage && "bg-secondary text-white"
+										number == currentPage && "bg-secondary border-secondary"
 									}`}
 									onClick={() => {
 										setCurrentPage(number);
 									}}
 								>
-									<span className="select-none">{number}</span>
+									<span className={`select-none ${number == currentPage && "text-white "}`}>
+										{number}
+									</span>
 								</li>
 							);
 						})}
