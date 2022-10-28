@@ -3,6 +3,7 @@ import React from "react";
 
 // Import Next
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 // Import Project Data
 import project from "../project.json";
@@ -25,6 +26,9 @@ const Layout = (props: LayoutProps) => {
 	// Props Destruction
 	const { children, title, description, keywords } = props;
 
+	// Variables
+	const router = useRouter();
+
 	return (
 		<>
 			<Head>
@@ -36,29 +40,38 @@ const Layout = (props: LayoutProps) => {
 				<meta name="description" content={description} />
 				<meta name="keywords" content={keywords ? keywords : project.keywords} />
 				<meta name="author" content={project.author} />
+				<meta property="og:image" content="/images/hero-image.jpeg" />
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content={router.asPath} />
+				<meta property="og:site_name" content={`${title} ${project.title_suffix}`} />
+				<meta property="og:locale" content={router.locale} />
+				<meta name="twitter:card" content="summary" />
+				<meta name="twitter:site" content="@kudretylmzzz" />
+				<meta name="twitter:creator" content="@kudretylmzzz" />
+				<meta name="twitter:url" content={router.asPath} />
+				<meta name="twitter:title" content={title} />
+				<meta name="twitter:description" content={description} />
+				<meta name="twitter:image" content="/images/hero-image.jpeg" />
 			</Head>
-			<div>
-				<div className="flex flex-col items-center justify-center h-full min-h-screen">
-					<Header />
-					<main className="w-full flex-1  flex items-center justify-center pb-10 pt-3">
-						<motion.div
-							className="w-full h-full"
-							variants={{
-								initial: { opacity: 0 },
-								animate: { opacity: 1 },
-								exit: { opacity: 0 },
-							}}
-							initial="initial"
-							animate="animate"
-							exit="exit"
-							transition={{ duration: 0.5 }}
-						>
-							{children}
-						</motion.div>
-					</main>
-					<Footer />
-				</div>
-			</div>
+
+			<Header />
+			<main className="w-full flex-1 flex items-center justify-center pb-10 pt-3" role="main">
+				<motion.div
+					className="w-full h-full flex justify-center items-center"
+					variants={{
+						initial: { opacity: 0 },
+						animate: { opacity: 1 },
+						exit: { opacity: 0 },
+					}}
+					initial="initial"
+					animate="animate"
+					exit="exit"
+					transition={{ duration: 0.5 }}
+				>
+					{children}
+				</motion.div>
+			</main>
+			<Footer />
 		</>
 	);
 };

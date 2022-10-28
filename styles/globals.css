@@ -42,3 +42,13 @@ body {
 		@apply dark:text-white my-5 font-bold dark:text-opacity-[0.87];
 	}
 }
+
+@layer components {
+	#__next {
+		@apply flex flex-1 flex-col h-full py-3 md:py-0;
+	}
+	html,
+	body {
+		@apply h-full;
+	}
+}

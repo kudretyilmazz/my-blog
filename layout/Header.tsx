@@ -60,17 +60,22 @@ const Header: NextComponentType = () => {
 				</div>
 			</div>
 			<div className="md:hidden">
-				<div>
+				<div role="checkbox" aria-checked={isMobileOpen}>
 					<Hamburger size={20} toggled={isMobileOpen} toggle={setIsMobileOpen} />
 				</div>
 
-				<nav className={`${isMobileOpen ? "opacity-100" : "opacity-0"} flex transition-all`}>
+				<nav
+					className={`${isMobileOpen ? "opacity-100" : "opacity-0"} flex transition-all`}
+					role="navigation"
+				>
 					<ul
+						role="menu"
 						className={`flex dark:bg-primary bg-white w-full  absolute left-0 h-40 z-10 flex-col justify-evenly items-center  `}
 					>
 						{menu?.map((item: { title: string; url: string }, index) => {
 							return (
 								<li
+									role="menuitem"
 									key={index}
 									className="font-bold select-none cursor-pointer flex justify-center items-center w-full h-full border-b-2 border-lighttext  first:border-t-2 "
 								>
@@ -93,7 +98,7 @@ const Header: NextComponentType = () => {
 					</ul>
 				</nav>
 			</div>
-			<nav className="hidden md:flex">
+			<nav className="hidden md:flex" role="navigation">
 				<ul className=" md:flex md:gap-x-10">
 					{menu?.map((item: { title: string; url: string }, index) => {
 						return (

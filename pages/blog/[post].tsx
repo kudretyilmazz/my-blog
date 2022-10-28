@@ -44,7 +44,7 @@ const Post = (props: PostProps) => {
 			description={currentPost?.description}
 			keywords={currentPost?.tags}
 		>
-			<section id="blog" className="mx-auto py-5 px-3 max-w-[1000px] w-full ">
+			<article role="article" id="blog" className="mx-auto py-5 px-3 max-w-[1000px] w-full ">
 				<h1 className="text-center md:text-left"> {currentPost?.title} </h1>
 				<div className="my-10 flex items-center justify-between flex-col md:flex-row ">
 					<div id="info" className="">
@@ -99,7 +99,7 @@ const Post = (props: PostProps) => {
 					dangerouslySetInnerHTML={{ __html: currentPost.content.html }}
 					className="content w-full"
 				></div>
-			</section>
+			</article>
 		</Layout>
 	);
 };

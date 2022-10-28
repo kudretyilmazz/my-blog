@@ -10,7 +10,7 @@ const Footer = () => {
 	return (
 		<footer className="flex flex-col mt-auto">
 			<div className="flex gap-x-5 justify-center items-center">
-				<a href="mailto:kudretylmzzz@gmail.com">
+				<a href="mailto:kudretylmzzz@gmail.com" aria-label="my e-mail">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						x="0"
@@ -28,7 +28,12 @@ const Footer = () => {
 					</svg>
 				</a>
 
-				<a href="https://www.linkedin.com/in/kudretyilmaz/" target="_blank" rel="noreferrer">
+				<a
+					href="https://www.linkedin.com/in/kudretyilmaz/"
+					aria-label="my linkedin page"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						x="0"
@@ -43,7 +48,12 @@ const Footer = () => {
 					</svg>
 				</a>
 
-				<a href="https://github.com/kudretyilmazz" target="_blank" rel="noreferrer">
+				<a
+					href="https://github.com/kudretyilmazz"
+					aria-label="my github page"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						className="w-6 h-6 dark:fill-white cursor-pointer"
