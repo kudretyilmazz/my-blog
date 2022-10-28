@@ -45,7 +45,7 @@ body {
 
 @layer components {
 	#__next {
-		@apply flex flex-1 flex-col h-full py-3 md:py-0;
+		@apply flex flex-1 flex-col min-h-full overflow-auto;
 	}
 	html,
 	body {
