@@ -2,7 +2,7 @@
 import { useRouter } from "next/router";
 
 // Import Util
-import { dateReableFormatter } from "utils/dateUtils";
+import { dateReableFormatter } from "src/utils/dateUtils";
 
 interface postTypes {
 	id: string;

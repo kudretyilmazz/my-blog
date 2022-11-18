@@ -5,14 +5,14 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 
 // Import Client
-import { getAllPosts } from "client/getAllPosts";
+import { getAllPosts } from "src/client/getAllPosts";
 
 // Import Layout
 import Layout from "layout/Layout";
 
 // Import Components
-import PostCard from "components/PostCard";
-import Pagination from "components/Pagination";
+import PostCard from "src/components/PostCard";
+import Pagination from "src/components/Pagination";
 
 interface postTypes {
 	id: string;

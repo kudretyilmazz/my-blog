@@ -2,20 +2,20 @@
 import React from "react";
 
 // Import Utils
-import { useTranslate } from "utils/translate";
+import { useTranslate } from "src/utils/translate";
 
 // Import Layout
 import Layout from "layout/Layout";
 
 // Import Components
-import Button from "components/Button";
+import Button from "src/components/Button";
 
 const Index = () => {
 	return (
 		<Layout title={useTranslate("ABOUT.ABOUT_TITLE")} description="Hakkımda ve iletişim bilgilerim">
 			<div id="about" className="mx-auto py-5 px-3 max-w-[1000px] ">
-				<h1> {useTranslate("ABOUT.ABOUT_TITLE")} </h1>
-				<div className="bio mt-16">
+				<h1 className="mt-10"> {useTranslate("ABOUT.ABOUT_TITLE")} </h1>
+				<div className="bio">
 					<div className="flex justify-between items-center">
 						<h4> {useTranslate("ABOUT.SHORT_CV")} </h4>
 

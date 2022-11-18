@@ -2,7 +2,7 @@
 import React from "react";
 
 // Import Translation
-import { useTranslate } from "utils/translate";
+import { useTranslate } from "src/utils/translate";
 
 const Footer = () => {
 	return (

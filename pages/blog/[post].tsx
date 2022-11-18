@@ -2,7 +2,7 @@
 import React from "react";
 
 // Import Client
-import { getSinglePost } from "client/getSinglePost";
+import { getSinglePost } from "src/client/getSinglePost";
 
 // Import Next
 import { useRouter } from "next/router";
@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import Layout from "layout/Layout";
 
 // Import Util
-import { dateReableFormatter } from "utils/dateUtils";
+import { dateReableFormatter } from "src/utils/dateUtils";
 
 // Import Next-Share
 import {

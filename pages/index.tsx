@@ -2,13 +2,13 @@
 import Image from "next/image";
 
 // Import Utils
-import { useTranslate } from "utils/translate";
+import { useTranslate } from "src/utils/translate";
 
 // Import Layout
 import Layout from "../layout/Layout";
 
 // Import Components
-import Button from "components/Button";
+import Button from "src/components/Button";
 
 // Images
 import heroImg from "/public/images/hero-image.jpeg";

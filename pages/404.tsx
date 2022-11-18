@@ -8,10 +8,10 @@ import Link from "next/link";
 import Layout from "layout/Layout";
 
 // Import Utils
-import { useTranslate } from "utils/translate";
+import { useTranslate } from "src/utils/translate";
 
 // Import Components
-import Button from "components/Button";
+import Button from "src/components/Button";
 
 const Custom404 = () => {
 	return (

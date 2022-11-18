@@ -1,6 +1,6 @@
 // Import Store
 import { Provider } from "react-redux";
-import { store } from "store/store";
+import { store } from "src/store/store";
 
 // Import Next Theme
 import { ThemeProvider } from "next-themes";
@@ -12,7 +12,7 @@ import NextNProgress from "nextjs-progressbar";
 import type { AppProps } from "next/app";
 
 // Global Style
-import "../styles/globals.css";
+import "src/styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
