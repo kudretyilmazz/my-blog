@@ -1,5 +1,5 @@
 // Import React
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 // Import Next
 import Link from "next/link";
@@ -28,7 +28,7 @@ import { Divide as Hamburger } from "hamburger-react";
 
 const Header: NextComponentType = () => {
 	// Variables
-	const { t } = useTranslation("common");
+	const { t } = useTranslation("translation");
 	const { theme, setTheme } = useTheme();
 	const router = useRouter();
 
@@ -89,7 +89,7 @@ const Header: NextComponentType = () => {
 													: ""
 											}`}
 										>
-											{t(item?.title)}
+											{t(`COMMON.${item?.title}`)}
 										</span>
 									</Link>
 								</li>
@@ -113,7 +113,7 @@ const Header: NextComponentType = () => {
 												: "hover:text-lighttext dark:hover:text-white "
 										}
 									>
-										{t(item?.title)}
+										{t(`COMMON.${item?.title}`)}
 									</span>
 								</Link>
 							</li>

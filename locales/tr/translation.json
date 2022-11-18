@@ -1,0 +1,26 @@
+{
+	"COMMON": {
+		"HOME": "Anasayfa",
+		"BLOG": "Blog",
+		"ABOUT": "Hakkımda",
+		"FOOTER_COPYRIGHT": "2022 © Tüm hakları saklıdır.",
+		"PREVIOUS": "Geri",
+		"NEXT": "İleri",
+		"404": "404 Sayfa Bulunamadı",
+		"RETURN_HOME": "Anasayfaya dönmek için tıklayınız"
+	},
+	"HOME": {
+		"HOMEPAGE": "Anasayfa",
+		"HERO_TITLE": "Merhaba, Ben Kudret",
+		"HERO_DESCRIPTION": "Bu sitede sizlere göstermek istediğim projelerimi, ne yaptığım ve ne yapacağım hakkında yazılarımı, eğer iletişime geçmek isterseniz kişisel bilgilerimi bulacaksınız. Ziyaretiniz için teşekkürler.",
+		"HERO_JOB": "Front-end Developer",
+		"DOWNLOAD_CV": "Özgeçmişimi İndir"
+	},
+	"ABOUT": {
+		"ABOUT_TITLE": "About",
+		"SHORT_CV": "Short Biography",
+		"CV_DESCRIPTION": "I graduated from the National Defense University in July 2021. Contrary to my profession and academic career, I have been interested in computer and web technologies since middle school in many branches (Seo, Front-end Web Development, WordPress CMS...) I improved myself by experimenting with online training and Bootcamp processes. I have been pursuing this interest as a hobby and freelance work, and I am currently integrating it into my business life as a Front-End Developer at ID3 company. At the same time, I continue to work as a Web Manager at Bublogta Digital Content Platform, where I am the founder.",
+		"CONTACT_INFORMATION": "My Contact Information",
+		"DOWNLOAD_CV": "Download My Resume"
+	}
+}

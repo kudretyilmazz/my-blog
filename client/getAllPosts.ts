@@ -15,5 +15,5 @@ export const getAllPosts = async () => {
 	`;
 
 	const { blogposts } = await graphcms.request(getAllPostsQuery);
-	return blogposts;
+	return blogposts.reverse();
 };

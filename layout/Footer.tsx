@@ -2,11 +2,9 @@
 import React from "react";
 
 // Import Translation
-import useTranslation from "next-translate/useTranslation";
+import { useTranslate } from "utils/translate";
 
 const Footer = () => {
-	// Variables
-	const { t } = useTranslation("common");
 	return (
 		<footer className="flex flex-col mt-auto">
 			<div className="flex gap-x-5 justify-center items-center">
@@ -65,7 +63,7 @@ const Footer = () => {
 					</svg>
 				</a>
 			</div>
-			<span className="text-center my-3 text-sm">{t("FOOTER_COPYRIGHT")} </span>
+			<span className="text-center my-3 text-sm">{useTranslate("COMMON.FOOTER_COPYRIGHT")} </span>
 		</footer>
 	);
 };

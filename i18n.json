@@ -2,8 +2,6 @@
 	"locales": ["tr", "en"],
 	"defaultLocale": "tr",
 	"pages": {
-		"*": ["common"],
-		"/": ["home"],
-		"/about": ["about"]
+		"*": ["translation"]
 	}
 }
