@@ -11,6 +11,9 @@ import { store } from "store/store";
 // Import Next Theme
 import { ThemeProvider } from "next-themes";
 
+// Import Progress Bar
+import NextNProgress from "nextjs-progressbar";
+
 // Import Type
 import type { AppProps } from "next/app";
 
@@ -25,6 +28,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 	return (
 		<Provider store={store}>
 			<ThemeProvider attribute="class">
+				<NextNProgress color="#ff3c41" startPosition={0.3} stopDelayMs={200} height={3} />
 				<Component {...pageProps} />
 			</ThemeProvider>
 		</Provider>
