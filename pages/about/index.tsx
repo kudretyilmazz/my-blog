@@ -10,6 +10,9 @@ import Layout from "layout/Layout";
 // Import Components
 import Button from "src/components/Button";
 
+// Import Project Config
+import project from "../../project.json";
+
 const Index = () => {
 	return (
 		<Layout title={useTranslate("ABOUT.ABOUT_TITLE")} description="Hakkımda ve iletişim bilgilerim">
@@ -21,7 +24,7 @@ const Index = () => {
 
 						<Button
 							label="HOME.DOWNLOAD_CV"
-							customLink={{ url: "/images/cv.pdf", props: { download: "kudret_yilmaz_cv" } }}
+							customLink={{ url: "/images/cv.pdf", props: { download: `${project.author}_cv` } }}
 						/>
 					</div>
 					<p className="mt-3">{useTranslate("ABOUT.CV_DESCRIPTION")}</p>

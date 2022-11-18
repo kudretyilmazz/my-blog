@@ -46,8 +46,8 @@ const Layout = (props: LayoutProps) => {
 				<meta property="og:site_name" content={`${title} ${project.title_suffix}`} />
 				<meta property="og:locale" content={router.locale} />
 				<meta name="twitter:card" content="summary" />
-				<meta name="twitter:site" content="@kudretylmzzz" />
-				<meta name="twitter:creator" content="@kudretylmzzz" />
+				<meta name="twitter:site" content={project.twitter} />
+				<meta name="twitter:creator" content={project.twitter} />
 				<meta name="twitter:url" content={router.asPath} />
 				<meta name="twitter:title" content={title} />
 				<meta name="twitter:description" content={description} />

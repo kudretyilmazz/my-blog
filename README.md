@@ -1,34 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Türkçe
 
-## Getting Started
+---
 
-First, run the development server:
+[Canlı önizleme](https://kudretyilmaz.me)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Teknoloji Yığını: TypeScript, React/Next JS, Redux Toolkit,i18Next, Hygraph (Graphcms), Tailwind CSS, Framer Motion
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Açıklama:** Kolaylıkla kişilleştirebileceğiniz portfolyo ve Blog içeriği yayımlamak için kullanabileceğiniz, gece moduna ve çoklu dil desteğine sahip bir web uygulamasıdır.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Kurulum
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Repoyu bilgisayarınıza klonlayın.
+2. Proje klasörüne gidin ve terminalinizi açın.
+3. `npm install` veya `yarn install` komutunu kullanarak bağımlılıkları yükleyin.
+4. hygraph.com'da hesap oluşturun ve aşağıdaki gibi 'blogpost' adında bir schema oluşturun:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+![alt text](./db_schema.png)
 
-## Learn More
+5. hygraph.com üzerinde content api adresini ve alın ve okuma iznini açın.
+6. Aldığınız api adresini, ana dizin bir .env dosyası oluşturup içine aşağıdaki gibi ekleyin:
+   `NEXT_PUBLIC_END_POINT: https://your-api.com`
 
-To learn more about Next.js, take a look at the following resources:
+## Kişiselleştirme
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Ana dizindeki `project.json` içindeki bilgileri kendinize göre düzenleyin.
+2. Doğrudan `/locales` altındaki çeviri dosyalarının içeriğini kendinize göre düzenleyin.
+3. `/public/images` altındaki cv.pdf dosyasını ve hero-image.jpeg dosyalarını kendi özgeçmişiniz ve fotoğrafınızla değiştirin. (Hata almamak için isimlerini aynı tutmaya özen gösterin.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Dağıtım
 
-## Deploy on Vercel
+Projenizi vercel ve benzeri sağlayıcılar üzerinde kolayca deploy edebilirsiniz.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# English
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+[Live preview](https://kudretyilmaz.me/en)
+
+Tech Stack: TypeScript, React/Next JS, Redux Toolkit,i18Next, Hygraph (Graphcms), Tailwind CSS, Framer Motion
+
+**Description:** It is a web application with night mode and multi-language support that you can use to publish portfolio and blog content that you can easily customize.
+
+## Setup
+
+1. Fork the repo and clone it to your computer.
+2. Go to the project folder and open your terminal.
+3. Install dependencies using `npm install` or `yarn install`.
+4. Create account at hygraph.com and create a schema named 'blogspot' as below:
+
+![alt text](./db_schema.png)
+
+5. Get content api address and on hygraph.com and turn on read permission.
+6. Create an .env file in the home directory and add the api address you received as follows:
+   `NEXT_PUBLIC_END_POINT: https://your-api.com`
+
+## Customize
+
+1. Customize the information in the `project.json` in the home directory.
+2. Customize the content of translation files directly under `/locales`.
+3. Replace the cv.pdf and hero-image.jpeg files under `/public/images` with your own resume and photo. (Make sure to keep their names the same to avoid mistakes.)
+
+## Deployment
+
+You can easily deploy your project on vercel and similar providers.

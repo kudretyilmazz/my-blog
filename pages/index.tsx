@@ -10,6 +10,9 @@ import Layout from "../layout/Layout";
 // Import Components
 import Button from "src/components/Button";
 
+// Import Project Config
+import project from "../project.json";
+
 // Images
 import heroImg from "/public/images/hero-image.jpeg";
 
@@ -35,7 +38,10 @@ const Home = () => {
 							<div className="flex justify-center md:justify-start">
 								<Button
 									label="HOME.DOWNLOAD_CV"
-									customLink={{ url: "/images/cv.pdf", props: { download: "kudret_yilmaz_cv" } }}
+									customLink={{
+										url: "/images/cv.pdf",
+										props: { download: `${project.author}_cv` },
+									}}
 								/>
 							</div>
 						</div>
