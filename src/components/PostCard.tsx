@@ -28,7 +28,7 @@ function PostCard(props: PostCardProps) {
 				router.push(`blog/${item.slug}`);
 			}}
 			id="work-card"
-			className="rounded-md my-4 bg-thirty dark:bg-primary px-5 hover:scale-105 duration-500  cursor-pointer transition ml-5 flex items-center justify-between"
+			className="rounded-md my-4 bg-thirty dark:bg-primary px-5 hover:scale-105 duration-500  cursor-pointer transition flex items-center justify-between"
 		>
 			<h3>{item?.title}</h3>
 			<div className="flex gap-x-4 my-4 ">

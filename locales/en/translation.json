@@ -7,7 +7,8 @@
 		"PREVIOUS": "Previous",
 		"NEXT": "Next",
 		"404": "404 Not Found",
-		"RETURN_HOME": "Click to return to the homepage"
+		"RETURN_HOME": "Click to return to the homepage",
+		"SEARCH": "search..."
 	},
 	"HOME": {
 		"HOMEPAGE": "Home",

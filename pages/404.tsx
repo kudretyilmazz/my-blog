@@ -1,11 +1,8 @@
 // Import React
 import React from "react";
 
-// Import Next
-import Link from "next/link";
-
 // Import Layout
-import Layout from "layout/Layout";
+import Layout from "src/layout/Layout";
 
 // Import Utils
 import { useTranslate } from "src/utils/translate";

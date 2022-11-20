@@ -6,7 +6,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 // Import Project Data
-import project from "../project.json";
+import project from "project.json";
 
 // Import Partials
 import Footer from "./Footer";

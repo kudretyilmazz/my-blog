@@ -8,7 +8,7 @@ import { getSinglePost } from "src/client/getSinglePost";
 import { useRouter } from "next/router";
 
 // Import Layout
-import Layout from "layout/Layout";
+import Layout from "src/layout/Layout";
 
 // Import Util
 import { dateReableFormatter } from "src/utils/dateUtils";

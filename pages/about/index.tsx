@@ -5,7 +5,7 @@ import React from "react";
 import { useTranslate } from "src/utils/translate";
 
 // Import Layout
-import Layout from "layout/Layout";
+import Layout from "src/layout/Layout";
 
 // Import Components
 import Button from "src/components/Button";
