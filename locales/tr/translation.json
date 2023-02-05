@@ -18,10 +18,10 @@
 		"DOWNLOAD_CV": "Özgeçmişimi İndir"
 	},
 	"ABOUT": {
-		"ABOUT_TITLE": "About",
-		"SHORT_CV": "Short Biography",
-		"CV_DESCRIPTION": "I graduated from the National Defense University in July 2021. Contrary to my profession and academic career, I have been interested in computer and web technologies since middle school in many branches (Seo, Front-end Web Development, WordPress CMS...) I improved myself by experimenting with online training and Bootcamp processes. I have been pursuing this interest as a hobby and freelance work, and I am currently integrating it into my business life as a Front-End Developer at ID3 company. At the same time, I continue to work as a Web Manager at Bublogta Digital Content Platform, where I am the founder.",
-		"CONTACT_INFORMATION": "My Contact Information",
-		"DOWNLOAD_CV": "Download My Resume"
+		"ABOUT_TITLE": "Hakkımda",
+		"SHORT_CV": "Kısa Özgeçmiş",
+		"CV_DESCRIPTION": "2021 Temmuz ayında Milli Savunma Üniversitesinden mezun oldum. Mesleğimin ve akademik kariyerimin aksine bilgisayar ve web teknolojilerine ortaokul çağımdan beri ilgi duymam nedeniyle birçok dalda (Seo, Front-end Web Development, Wordpress CMS…) deneme yaparak, çevrimiçi eğitimler ve bootcamp süreçleri ile kendimi geliştirdim. Hobi olarak ve freelance işlerle sürdürdüğüm bu ilgimi şu an ID3 firmasında Front-End Developer olarak iş hayatıma da entegre etmekteyim. Aynı zamanda kurucusu olduğum Bublogta Dijital İçerik Platformu'nda Web Yöneticiliği görevini üstlenmeye devam ediyorum.",
+		"CONTACT_INFORMATION": "İletişim Bilgilerim",
+		"DOWNLOAD_CV": "Özgeçmişimi İndir"
 	}
 }
